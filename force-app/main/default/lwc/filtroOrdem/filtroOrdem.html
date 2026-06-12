@@ -1,0 +1,28 @@
+<template>
+    <div>
+        <lightning-combobox
+            name="tipoMoeda"
+            label="Tipo Moeda"
+            value={valueSort}
+            placeholder="Selecione a ordenação"
+            options={options_ordem}
+            onchange={handleSort} ></lightning-combobox>
+    </div>
+    <div>
+            <lightning-combobox
+            name="tipoHabilitacao"
+            label="Habilitação"
+            value={valueFiltro}
+            placeholder="Seleciona o filtro"
+            options={options_filtro}
+            onchange={handleChange} ></lightning-combobox>
+    </div>
+    <br/>
+    <div>
+            <lightning-datatable
+                data={data2}
+                columns={columns}
+                key-field="cpf">
+            </lightning-datatable>
+    </div>
+</template>

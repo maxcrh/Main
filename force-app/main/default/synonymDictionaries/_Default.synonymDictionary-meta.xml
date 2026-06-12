@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SynonymDictionary xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groups>
+        <languages>en_US</languages>
+        <languages>pt_BR</languages>
+        <terms>gato</terms>
+        <terms>gat</terms>
+    </groups>
+    <label>_Default</label>
+</SynonymDictionary>

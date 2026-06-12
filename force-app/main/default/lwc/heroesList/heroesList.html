@@ -1,0 +1,11 @@
+<template>
+        <div class="container">
+            <template for:each={personagens} for:item="personagem">
+                <c-hero-tile
+                    key={personagem.Id} 
+                    heroes={personagem} 
+                    ontileclick={handleTileClick}>
+                </c-hero-tile>
+            </template>
+        </div>
+</template>

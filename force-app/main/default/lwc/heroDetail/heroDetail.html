@@ -1,0 +1,11 @@
+<template>
+    <template if:true={hero}>
+        <div class="container">
+            <div class="slds-text-heading_medium">O herói escolhido é: </div>
+            <div class="slds-text-heading_small">{personagemEscolhido.Name}</div>
+        </div>
+        </template>
+        <template if:false={hero}>
+            <div class="slds-text-heading_medium">Selecione seu herói</div>
+    </template>
+</template>

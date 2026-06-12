@@ -1,0 +1,15 @@
+<template>
+    <div class="wrapper">
+    <header class="header">Heróis disponíveis for {name}</header>
+    <section class="content">
+        <div class="columns">
+        <main class="main" >
+            <c-heroes-list onheroselected={handleHeroSelected}></c-heroes-list>
+        </main>
+        <aside class="sidebar-second">
+            <c-hero-detail hero-id={selectedHeroId}></c-hero-detail>
+        </aside>
+        </div>
+    </section>
+    </div>
+</template>
