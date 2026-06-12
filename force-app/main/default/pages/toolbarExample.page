@@ -1,0 +1,16 @@
+<apex:page >
+    <apex:toolbar id="theToolbar">
+        <apex:outputText value="Sample Toolbar"></apex:outputText>
+    	<apex:toolbarGroup itemSeparator="line" id="theToolbarlinks">
+            <apex:outputLink value="https://www.gatry.com">Gatry</apex:outputLink>
+            <apex:outputLink value="https://www.twitter.com">Twitter</apex:outputLink>
+        </apex:toolbarGroup>
+        
+        <apex:toolbarGroup itemSeparator="line" id="theToolbarSearch">
+            <apex:form >
+                <apex:inputText id="search">Pesquisar</apex:inputText>
+                <apex:commandLink value="Buscar" id="TheCommandLink"/>
+            </apex:form>
+        </apex:toolbarGroup>   
+    </apex:toolbar>
+</apex:page>

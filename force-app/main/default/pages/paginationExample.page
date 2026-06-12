@@ -1,0 +1,17 @@
+<apex:page standardController="Account" recordsetvar="accounts">
+    <apex:pageBlock title="Viweing Accounts">
+    	<apex:form id="theForm">
+        	<apex:pageBlockSection >
+            	<apex:dataList value="{!accounts}" var="a">
+                	{!a.name}
+                </apex:dataList>
+            </apex:pageBlockSection>
+            <apex:panelGrid columns="4">
+                <apex:commandLink action="{!first}">Primeiro</apex:commandLink>
+                <apex:commandLink action="{!previous}">Anterior</apex:commandLink>
+                <apex:commandLink action="{!next}">Próximo</apex:commandLink>
+                <apex:commandLink action="{!last}">Último</apex:commandLink>
+            </apex:panelGrid>
+        </apex:form>
+    </apex:pageBlock>
+</apex:page>

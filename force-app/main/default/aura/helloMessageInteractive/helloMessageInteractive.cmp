@@ -1,0 +1,20 @@
+<aura:component>
+ 
+    <aura:attribute name="message" type="String"/>
+    <aura:attribute name="time" type="String"/>
+ 
+    <p>Message of the day: {!v.message}</p>
+    <p>My soccer team is: {!v.time}</p>
+ 
+    <div>
+        <lightning:button label="You look nice today."
+            onclick="{!c.handleClick}"/>
+ 
+        <lightning:button label="Today is going to be a great day!"
+            onclick="{!c.handleClick}"/>
+        
+        <lightning:button label="Meu time é o SPFC!"
+            onclick="{!c.handleTime}"/>
+    </div>
+ 
+</aura:component>

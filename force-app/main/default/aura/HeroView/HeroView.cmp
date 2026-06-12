@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+    <aura:attribute name="testeCampo" type="String"/>
+    <aura:attribute name="textoEntrada" type="String"/>
+
+    <h1> Aqui vai o valor porra: {!v.testeCampo}</h1>
+    <lightning:input value="{!v.textoEntrada}" label="Insira valor"/>
+    <lightning:button label="Aperte aqui porra!!!" onclick="{!c.CliqueAqui}"/>
+
+</aura:component>

@@ -1,0 +1,38 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="expenses" type="ExpenseCar__c[]"/>
+    <aura:attribute name="newExpenseCar" type="ExpenseCar__c"
+         default="{ 'sobjectType': 'ExpenseCar__c',
+                        'Despesa__c': '',
+                        'Valor__c': 0,
+                        'Data__c': ''}"/>
+    
+    <lightning:input aura:id="expenseform" label="Client"
+                     name="expenseCar"
+                     value=""
+                     placeholder="City LX"/>
+    <lightning:input type="text" 
+                     aura:id="expensesform" 
+                     placeholder="Insira qual foi a despesa" 
+                     label="Despesa" 
+                     value="{! v.newExpenseCar.Despesa__c }" 
+                     required="true" 
+                     name="expenseName"/>
+    <lightning:input type="date" aura:id="expenseform" label="Data"
+                     name="expenseDate"
+                     value="{! v.newExpenseCar.Data__c }"/>
+    <lightning:input type="number" 
+                     aura:id="expensesform" 
+                     placeholder="Insira qual o valor da despesa" 
+                     label="Valor" 
+                     value="{! v.newExpenseCar.Valor__c }"
+                     required="true" 
+                     name="expenseValue" 
+                     min="0.1"
+                     formatter="currency"
+                     step="0.01"
+                     messageWhenRangeUnderflow="Insira um valor de pelo menos R$0.01"/>
+    <lightning:button label="Inserir despesa"
+                      class="slds-m-top_medium"
+                      variant="brand"
+                      onclick="{!c.clickCreate}"/>
+</aura:component>

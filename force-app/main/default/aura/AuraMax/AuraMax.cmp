@@ -1,0 +1,14 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="msgList" type="list" default="['Item 1', 'Item 2', 'Item 3']"/>
+    
+	<h1> Exemplo 1 de aula </h1>
+    
+    <p> {! v.msgList[0]}</p>
+    <p> {! v.msgList[1]}</p>
+    <p> {! v.msgList[2]}</p>
+    
+    <p> Lista de interação </p>
+    <aura:iteration items="{! v.msgList }" var ="msg">
+        <c:AuraMessage mensagem="{! msg }"/>
+    </aura:iteration>
+</aura:component>

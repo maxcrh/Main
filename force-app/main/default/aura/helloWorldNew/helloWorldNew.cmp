@@ -1,0 +1,3 @@
+<aura:component >
+	<p>Hello Lightning Max!</p>
+</aura:component>

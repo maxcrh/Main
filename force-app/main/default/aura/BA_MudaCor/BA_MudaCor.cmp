@@ -1,0 +1,250 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:attribute name="response" type="String"/>
+    
+    <aura:attribute name="ListCor" type="String[]"/>  
+    <aura:attribute name="ListCor2" type="String[]"/>
+    <aura:attribute name="ListCor3" type="String[]"/>
+    <aura:attribute name="ListCor4" type="String[]"/>
+    <aura:attribute name="ListCor5" type="String[]"/>
+    <aura:attribute name="ListCor6" type="String[]"/>
+    <aura:attribute name="ListCor7" type="String[]"/>
+    <aura:attribute name="ListCor8" type="String[]"/>
+    <aura:attribute name="Detalhamento" type="Boolean" default="false" />
+    
+
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="loaded" type="Boolean" default="false" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.getResponse}"/>
+    <div class="exampleHolder">
+        <div class="slds-section slds-is-open" > 
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Status do Cliente</span>
+            </h3>
+            <aura:if isTrue="{! v.loaded }">                             
+                <aura:if  isTrue="{!v.loaded}">           
+                    <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                        <thead>
+                            <tr class="slds-text-title--caps">
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Cadastro">Cadastro</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Limite">Limite </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="KYC">KYC</div>
+                                </th>
+                                 <th scope="col">
+                                    <div class="slds-truncate" title="Adesão Comex">Adesão Comex</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>                                
+                                <td class="slds-truncate" data-label="Cadastro"  width="25%">
+                                    <div class="slds-truncate"  title="" >                                        
+                                        <aura:iteration items="{!v.ListCor}" var="rateLst">                                            
+                                            <aura:if isTrue="{!rateLst=='verde'}">
+                                                <lightning:icon iconName="utility:success" alternativeText="Success!" variant="Success" title="Sem pendência" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst=='vermelho'}">                                                
+                                                <lightning:icon iconName="utility:error" alternativeText="Error!" variant="error" title="Com pendência" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst=='amarelo'}">
+                                                <lightning:icon iconName="utility:warning" alternativeText="Warning!" variant="warning" title="" />
+                                            </aura:if> 
+                                            <aura:if isTrue="{!rateLst=='nulo'}">
+                                                 <lightning:icon iconName="action:recall" size="x-small" title="Atualizar registro" alternativeText="Recall!" variant="Recall"/>
+                                            </aura:if> 
+                                            
+                                        </aura:iteration>
+                                    </div>
+                                </td>
+                                <td class="slds-truncate" data-label="Limite"  width="25%">
+                                    <div class="slds-truncate" title="">
+                                        
+                                        <aura:iteration items="{!v.ListCor2}" var="rateLst2">
+                                            
+                                            <aura:if isTrue="{!rateLst2=='verde'}">                          
+                                                <lightning:icon iconName="utility:success" alternativeText="Success!" variant="Success" title="Sem pendência" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst2=='vermelho'}">                           
+                                                <lightning:icon iconName="utility:error" alternativeText="Error!" variant="error" title="Com pendência" />
+                                            </aura:if>
+                                            
+                                            <aura:if isTrue="{!rateLst2=='amarelo'}">                            
+                                                <lightning:icon iconName="utility:warning" alternativeText="Warning!" variant="warning" title="" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst2=='nulo'}">
+                                                 <lightning:icon iconName="action:recall" size="x-small" title="Atualizar registro" alternativeText="Recall!" variant="Recall"/>
+                                            </aura:if> 
+                                        </aura:iteration>
+                                    </div>
+                                </td>
+                                <td  class="slds-truncate" data-label="KYC"  width="25%">
+                                    <div class="slds-truncate" title="">
+                                        <aura:iteration items="{!v.ListCor3}" var="rateLst3">
+                                            <aura:if isTrue="{!rateLst3=='verde'}">   
+                                                <lightning:icon iconName="utility:success" alternativeText="Success!" variant="Success" title="Sem pendência" />                                                
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst3=='vermelho'}">                               
+                                                <lightning:icon iconName="utility:error" alternativeText="Error!" variant="error" title="Com pendência" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst3=='amarelo'}">                               
+                                                <lightning:icon iconName="utility:warning" alternativeText="Warning!" variant="warning" title="" />
+                                            </aura:if> 
+                                            <aura:if isTrue="{!rateLst3=='nulo'}">
+                                                 <lightning:icon iconName="action:recall" size="x-small" title="Atualizar registro" alternativeText="Recall!" variant="Recall"/>
+                                            </aura:if> 
+                                        </aura:iteration>                    
+                                    </div>
+                                </td>
+                                <td  class="slds-truncate" data-label="Adesão"  width="25%">
+                                    <div class="slds-truncate" title="">
+                                        <aura:iteration items="{!v.ListCor7}" var="rateLst7">
+                                            <aura:if isTrue="{!rateLst7=='verde'}">   
+                                                <lightning:icon iconName="utility:success" alternativeText="Success!" variant="Success" title="Com adesão" />                                                
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst7=='vermelho'}">                               
+                                                <lightning:icon iconName="utility:error" alternativeText="Error!" variant="error" title="Sem adesão" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst7=='cinza'}">                               
+                                                <lightning:icon iconName="utility:success" alternativeText="check!" variant="check" title="Pessoa Física com adesão automática" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst7=='nulo'}">
+                                                 <lightning:icon iconName="action:recall" size="x-small" title="Atualizar registro" alternativeText="Recall!" variant="Recall"/>
+                                            </aura:if>
+                                        </aura:iteration>                    
+                                    </div>
+                                </td>  
+                            </tr>
+                            
+                        </tbody>
+                    </table>      
+                    
+                    <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                        <thead>
+                            <tr class="slds-text-title--caps">
+                                <th scope="col">
+                                    <div class="slds-list__item slds-m-right_large slds-grid slds-truncate_container_75" title="Pendência de contrato">Pendência de contrato</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-list__item slds-m-right_large slds-grid slds-truncate_container_75" title="Receita">Receita federal </div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-list__item slds-m-right_large slds-grid slds-truncate_container_75" title="Restrições">Restrições</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-list__item slds-m-right_large slds-grid slds-truncate_container_75" title="Importação">Importação</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                
+                                <td class="slds-truncate" data-label="Pendência de contrato" width="25%">
+                                    <div class="slds-truncate" title="">
+                                        <aura:iteration items="{!v.ListCor4}" var="rateLst4">
+                                            
+                                            <aura:if isTrue="{!rateLst4=='verde'}">                                                
+                                                <lightning:icon iconName="utility:success" alternativeText="Success!" variant="Success" title="Sem pendência" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst4=='vermelho'}">                                                
+                                                <lightning:icon iconName="utility:error" alternativeText="Error!" variant="error" title="Com pendência" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst4=='amarelo'}">
+                                                <lightning:icon iconName="utility:warning" alternativeText="Warning!" variant="warning" title="" />
+                                            </aura:if> 
+                                            <aura:if isTrue="{!rateLst4=='nulo'}">
+                                                 <lightning:icon iconName="action:recall" size="x-small" title="Atualizar registro" alternativeText="Recall!" variant="Recall"/>
+                                            </aura:if> 
+                                        </aura:iteration>
+                                        
+                                    </div>
+                                </td>
+                                
+                                <td class="slds-truncate" data-label="Receita"  width="25%">
+                                    <div class="slds-truncate" title="">
+                                        <aura:iteration items="{!v.ListCor5}" var="rateLst5">                                            
+                                            <aura:if isTrue="{!rateLst5=='verde'}">                                                
+                                                <lightning:icon iconName="utility:success" alternativeText="Success!" variant="Success" title="Sem pendência" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst5=='vermelho'}">                                                
+                                                <lightning:icon iconName="utility:error" alternativeText="Error!" variant="error" title="Com pendência" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst5=='amarelo'}">
+                                                <lightning:icon iconName="utility:warning" alternativeText="Warning!" variant="warning" title="" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst5=='nulo'}">
+                                                 <lightning:icon iconName="action:recall" size="x-small" title="Atualizar registro" alternativeText="Recall!" variant="Recall"/>
+                                            </aura:if> 
+                                        </aura:iteration>
+                                    </div>
+                                </td>
+                                
+                                <td class="slds-truncate" data-label="Restrições"  width="25%">
+                                    <div class="slds-truncate" title="">
+                                        
+                                        <aura:iteration items="{!v.ListCor6}" var="rateLst6">
+                                            
+                                            <aura:if isTrue="{!rateLst6=='verde'}">                                                
+                                                <lightning:icon iconName="utility:success" alternativeText="Success!" variant="Success" title="Sem pendência" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst6=='vermelho'}">                                                
+                                                <lightning:icon iconName="utility:error" alternativeText="Error!" variant="error" title="Com pendência" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst6=='amarelo'}">
+                                                <lightning:icon iconName="utility:warning" alternativeText="Warning!" variant="warning" title="" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst6=='nulo'}">
+                                                 <lightning:icon iconName="action:recall" size="x-small" title="Atualizar registro" alternativeText="Recall!" variant="Recall"/>
+                                            </aura:if> 
+                                        </aura:iteration>
+                                        
+                                    </div>
+                                    
+                                </td>
+                                
+                                <td class="slds-truncate" data-label="Importação"  width="25%">
+                                    <div class="slds-truncate" title="">
+                                        
+                                        <aura:if isTrue="{!v.Detalhamento}">
+                                            <lightning:icon iconName="action:close" size="x-small" title="Importação Inexistente" alternativeText="Close!" variant="Close"/>
+                                          <aura:set attribute="else">          
+                                        <aura:iteration items="{!v.ListCor8}" var="rateLst8">                              
+                                            <aura:if isTrue="{!rateLst8=='verde'}">
+                                                
+                                                <lightning:icon iconName="utility:success" alternativeText="Success!" variant="Success" title="Ativo" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst8=='vermelho'}">
+                                                
+                                                <lightning:icon iconName="utility:error" alternativeText="Error!" variant="error" title="Bloqueado" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst8=='amarelo'}">
+                                                <lightning:icon iconName="utility:warning" alternativeText="Warning!" variant="warning" title="Pendência" />
+                                            </aura:if>
+                                            <aura:if isTrue="{!rateLst8=='nulo'}">
+                                                 <lightning:icon iconName="action:recall" size="x-small" title="Atualizar registro" alternativeText="Recall!" variant="Recall"/>
+                                            </aura:if>     
+                                        </aura:iteration>
+                                          </aura:set>  
+                                      </aura:if> 
+                                   </div>
+                                    
+                                </td>	
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>   
+                    
+                </aura:if>
+                
+                <aura:set attribute="else">
+                    <lightning:spinner alternativeText="Loading" size="small" />
+                </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

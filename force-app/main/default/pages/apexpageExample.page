@@ -1,0 +1,37 @@
+<apex:page >
+    <apex:form >
+        <apex:pageMessage summary="Teste de apex message" severity="2"></apex:pageMessage>
+    	<apex:pageBlock Title="First Block">
+            <apex:pageBlockSection title="First Section">
+                <apex:pageBlockSectionItem >Campeonato Paulista</apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >Libertadores</apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >Mundial</apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Second Section">
+                <apex:pageBlockSectionItem >Item 1</apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >Item 2</apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >Item 3</apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Salvar"/>
+                <apex:commandButton value="Cancelar"/>
+            </apex:pageBlockButtons>
+    	</apex:pageBlock>
+
+        <apex:pageBlock title="Estudos de inputText">
+        	
+                Nome: <apex:inputText id="name"/> <br/><br/>
+                Idade: <apex:inputText id="age"/> <br/><br/>
+                Username: <apex:inputText id="username"/> <br/><br/>
+                Senha: <apex:inputSecret id="password"/> <br/><br/>
+                Descrição: <apex:inputTextArea id="coverLetter"/> <br/><br/>
+            	Está empregado atualmente: <apex:inputCheckBox id="empl"/> <br/><br/>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Salvar"/>
+                <apex:commandButton value="Cancelar"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>   
+    </apex:form>    
+</apex:page>

@@ -1,0 +1,11 @@
+<apex:page standardController="Account">
+    <apex:pageBlock id="block1" title="Account Summary">
+        <apex:pageBlockSection id="section1" title="teste">
+            Name: {!Account.Name}
+        </apex:pageBlockSection>
+        <apex:pageBlockSection id="section2" title="teste">
+            Name: {!Account.Name}
+        </apex:pageBlockSection>
+        <script> twistSection(document.getElementById('{!$Component.block1}').getElementsByTagName('img')[1]) </script>
+    </apex:pageBlock>
+</apex:page>

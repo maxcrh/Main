@@ -1,0 +1,53 @@
+<aura:component>
+    <aura:attribute name="newHero" type="Character__c"
+         default="{ 'sobjectType': 'Character__c',
+                        'Name': '',
+                        'Hero_name__c': '',
+                        'Team_Heroes__c': 'DC',
+                        'Power__c': 0,
+                        'HP__c': 0 }"/>
+    //Cria o evento do formulário
+    <aura:registerEvent name="createHero" type="c:heroEvent"/>
+    <!-- CREATE NEW HERO -->
+    <div aria-labelledby="newheroform">
+        <!-- BOXED AREA -->
+        <fieldset class="slds-box slds-theme_default slds-container_small">
+        <legend id="newheroform" class="slds-text-heading_small
+          slds-p-vertical_medium">
+          Add hero
+        </legend>
+        <!-- CREATE NEW HERO FORM -->
+        <form class="slds-form_stacked">
+            <lightning:input aura:id="heroform" label="Character Name"
+                             name="charName"
+                             value="{!v.newHero.Name}"
+                             required="true"/>
+          	<lightning:input aura:id="heroform" label="Hero Name"
+                             name="heroName"
+                             value="{!v.newHero.Hero_name__c}"
+                             required="true"/>
+            <lightning:input aura:id="heroform" label="Team Heroes"
+                             name="teamHeroes"
+                             value="{!v.newHero.Team_Heroes__c}"
+                             required="true"/>
+            <lightning:input aura:id="heroform" label="Power"
+                             name="heroPower"
+                             value="{!v.newHero.Power__c}"
+                             required="true"/>
+            <lightning:input aura:id="heroform" label="HP"
+                             name="heroHP"
+                             value="{!v.newHero.HP__c}"
+                             required="true"/>
+            
+            
+            <lightning:button label="Register your hero"
+                              class="slds-m-top_medium"
+                              variant="brand"
+                              onclick="{!c.clickCreate}"/>
+        </form>
+        <!-- / CREATE NEW HERO FORM -->
+      </fieldset>
+      <!-- / BOXED AREA -->
+    </div>
+    <!-- / CREATE NEW HERO -->
+</aura:component>

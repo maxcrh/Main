@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="message" type="String" />
+    <p>{! v.message }</p>
+    <lightning:button label="Clicou botão 1" title="btn1" onclick="{!c.handleClick}"/>
+    <lightning:button label="Clicou botão 2" title="btn2" onclick="{!c.handleClick}"/>
+</aura:component>
