@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#FA8B05</headerColor>
+        <logo>Koala</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Rastreia auditorias de energia e recomendações de produto.</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Consultas de energia</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>standard-Feed</tabs>
+    <tabs>standard-CollaborationGroup</tabs>
+    <tabs>Energy_Audit__c</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Product2</tabs>
+    <tabs>standard-Task</tabs>
+    <tabs>Suggestion__c</tabs>
+    <tabs>Battle_Station__c</tabs>
+    <tabs>Resource__c</tabs>
+    <tabs>Supply__c</tabs>
+    <tabs>Character__c</tabs>
+    <tabs>Team_Heroes__c</tabs>
+    <tabs>Language_Course_Designer__c</tabs>
+    <tabs>Parameter_Process__c</tabs>
+    <tabs>BulkCampanhaMember__c</tabs>
+    <tabs>Pet__c</tabs>
+    <tabs>Adocao__c</tabs>
+    <tabs>Car__c</tabs>
+    <tabs>ExpenseCar__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Consultas_de_energia_UtilityBar</utilityBar>
+</CustomApplication>

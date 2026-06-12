@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created by Lightning App Builder</description>
+    <flexiPage>Seletor_de_Her_is</flexiPage>
+    <label>Seletor de Heróis</label>
+    <motif>Custom14: Hands</motif>
+</CustomTab>
